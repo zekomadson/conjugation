@@ -11,6 +11,7 @@ class Verb: Identifiable, Codable {
     var id: String
     var spanishBase: String
     var englishBase: String
+    var currentConjugation: String = ""
     
     init(id: String = UUID().uuidString, spanishBase: String, englishBase: String) {
         self.id = id
@@ -22,5 +23,16 @@ class Verb: Identifiable, Codable {
         case id
         case spanishBase
         case englishBase
+    }
+    
+    func genNewConjugation() {
+        // TODO: Generates a new conjugation of the verb.
+        
+    }
+}
+
+extension Verb {
+    static var sampleVerb: Verb {
+        Verb(spanishBase: "Pensar", englishBase: "Think")
     }
 }

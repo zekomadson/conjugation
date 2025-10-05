@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isAnimating = false
+    @StateObject private var verbVM = VerbViewModel(currentVerb: Verb.sampleVerb)
     
     var body: some View {
         NavigationStack {
@@ -52,7 +53,7 @@ struct ContentView: View {
                     
                     // Enter Button
                     NavigationLink {
-                        LandingView()
+                        LandingView(verbVM: verbVM)
                     } label: {
                         HStack {
                             Text("Start Learning")

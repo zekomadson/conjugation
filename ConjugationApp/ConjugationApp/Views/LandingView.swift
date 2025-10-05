@@ -198,5 +198,5 @@ struct LandingView: View {
 }
 
 #Preview {
-    LandingView()
+    LandingView(verbVM: VerbViewModel(currentVerb: Verb.sampleVerb))
 }
