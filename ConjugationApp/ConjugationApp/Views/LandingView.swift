@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct LandingView: View {
     // Pass View Models from LandingView to maintain single instances
