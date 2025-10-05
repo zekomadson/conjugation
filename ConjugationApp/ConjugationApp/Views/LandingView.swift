@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct LandingView: View {
+    // Pass View Models from LandingView to maintain single instances
+    @ObservedObject var verbVM: VerbViewModel
+    
+    @Environment(\.dismiss) private var dismiss
+    
+    
     // State variables for user interaction
     @State private var userInput = ""
     @State private var showResult = false
